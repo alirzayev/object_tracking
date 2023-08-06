@@ -5,6 +5,9 @@ from time import time
 from ultralytics import YOLO
 from deep_sort_realtime.deepsort_tracker import DeepSort
 
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+
 class ObjectDetection:
     """
     Class for performing object detection using YOLOv8 and DeepSort tracker.
@@ -124,10 +127,3 @@ class ObjectDetection:
         
         cap.release()
         cv2.destroyAllWindows()
-
-if __name__ == "__main__":
-    """
-    Initialize the ObjectDetection instance and start the process.
-    """
-    detection = ObjectDetection(capture_index=0)  # Specify the capture index for your camera
-    detection.run()
