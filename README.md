@@ -38,10 +38,10 @@ Follow these steps to set up and run the project on your local machine:
 
 ## Usage
 
-1. Open the `main.py` file and configure the `capture_index` parameter:
+1. Open the `main.py` file and configure the `traching_method` and `source` parameters:
    ```python
-   detection = ObjectDetection(capture_index=0)  # Specify the capture index for your camera or video file
-   detection.run()
+   tracker = ObjectTracker(tracking_method='ocsort',source='0')  # Specify the capture index for your camera or video file
+   tracker.run()
    ```
 
 2. Run the main script to start object detection and tracking:
