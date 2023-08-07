@@ -56,7 +56,6 @@ Follow these steps to set up and run the project on your local machine:
 - ultralytics
 - numpy
 - scikit-learn
-- deep-sort-realtime
 
 ## License
 

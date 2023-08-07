@@ -24,7 +24,7 @@ class ObjectTracker:
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.show = False
         self.save = False
-        self.classes = 0,2,3,5,7 # person, car, motorcycle, bus, truck
+        self.classes = [0, 2, 3, 5, 7] # person, car, motorcycle, bus, truck
         self.half = False
         self.show_labels = False
         self.show_conf = False
@@ -57,7 +57,7 @@ class ObjectTracker:
         predictor.save_dir = predictor.get_save_dir()
 
 
-    @torch.no_grad()
+    @torch.no_grad() # improve performance with disabling gradient calculations for the following code block.
     def run(self):
         """
         Runs the object tracking process.
@@ -116,9 +116,3 @@ class ObjectTracker:
 
         if self.save_mot:
             print(f'MOT results saved to {self.yolo.predictor.mot_txt_path}')
-
-
-
-if __name__ == "__main__":
-    tracker = ObjectTracker()
-    tracker.run()
