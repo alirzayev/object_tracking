@@ -7,6 +7,7 @@ aw_param: 0.5
 cmc_off: false
 conf: 0.5
 delta_t: 3
+per_class: True
 det_thresh: 0
 embedding_off: false
 inertia: 0.2

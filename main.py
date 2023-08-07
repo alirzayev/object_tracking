@@ -1,6 +1,5 @@
-
-from app.detection.yolo_detection import ObjectDetection
+from app.tracking.object_tracker import ObjectTracker
 
 if __name__ == "__main__":
-    detection = ObjectDetection(capture_index=0)  # Specify the capture index for your camera
+    detection = ObjectTracker(tracking_method='ocsort', source='0') 
     detection.run()

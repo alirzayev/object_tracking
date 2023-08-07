@@ -15,7 +15,7 @@ def get_tracker_config(tracker_type):
     return tracking_config
 
 
-def create_tracker(tracker_type, tracker_config, reid_weights, device, half, per_class):
+def create_tracker(tracker_type, tracker_config, reid_weights, device, half):
 
     with open(tracker_config, "r") as f:
         cfg = yaml.load(f.read(), Loader=yaml.FullLoader)
@@ -42,7 +42,7 @@ def create_tracker(tracker_type, tracker_config, reid_weights, device, half, per
     elif tracker_type == 'ocsort':
         from app.tracking.trackers.ocsort.ocsort import OCSort
         ocsort = OCSort(
-            per_class,
+            per_class=cfg.per_class,
             det_thresh=cfg.det_thresh,
             max_age=cfg.max_age,
             min_hits=cfg.min_hits,
@@ -88,7 +88,7 @@ def create_tracker(tracker_type, tracker_config, reid_weights, device, half, per
             reid_weights,
             device,
             half,
-            per_class,
+            per_class=cfg.per_class,
             det_thresh=cfg.det_thresh,
             max_age=cfg.max_age,
             min_hits=cfg.min_hits,
