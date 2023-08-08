@@ -1,7 +1,7 @@
 ```markdown
 # Object Detection and Tracking using YOLOv8 and DeepSORT
 
-This Python project showcases real-time object detection using YOLO (You Only Look Once) v8 and object tracking using the DeepSORT tracking algorithm. The combination of these techniques enables the detection and tracking of objects in video streams or camera feeds.
+This Python project showcases real-time object detection using YOLOv8 (You Only Look Once) and object tracking using the multiple tracking algorithms. Supported algorithms are : botsort, bytetrack, deepocsort, ocsort, strongsort. The combination of these techniques enables the detection and tracking of objects in video streams or camera feeds.
 
 ## Table of Contents
 
