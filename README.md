@@ -40,7 +40,7 @@ Follow these steps to set up and run the project on your local machine:
 
 1. Open the `main.py` file and configure the `traching_method` and `source` parameters:
    ```python
-   tracker = ObjectTracker(tracking_method='ocsort',source='0')  # Specify the capture index for your camera or video file
+   tracker = ObjectTracker(tracking_method='deepocsort',source='0')  # Specify the tracking method and source for your camera or video file
    tracker.run()
    ```
 
@@ -64,5 +64,5 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgments
 
 - The YOLO model is powered by Ultralytics: [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
-- The DeepSORT tracker is used from the repository: [https://github.com/levan92/deep_sort_realtime](https://github.com/levan92/deep_sort_realtime)
+- Adapted from the repository: [https://github.com/mikel-brostrom/yolo_tracking/tree/master/boxmot](https://github.com/mikel-brostrom/yolo_tracking/tree/master/boxmot)
 ```
